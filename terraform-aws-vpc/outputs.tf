@@ -3,6 +3,11 @@ output "vpc_id" {
   value       = concat(aws_vpc.this.*.id, [""])[0]
 }
 
+output "name_test" {
+  description = "The name of the VPC specified as argument to this module"
+  value       = var.name
+}
+
 output "vpc_arn" {
   description = "The ARN of the VPC"
   value       = concat(aws_vpc.this.*.arn, [""])[0]
